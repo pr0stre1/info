@@ -1,0 +1,63 @@
+v 1.00
+========================
+User changes:
+    -Added new commands: /play, /skip, /clear, /pause, /now, /queue, /join, /leave, inline /play
+    -Support for command /play: YouTube, SoundCloud, Twitch, Streams, video, sync
+    -Support for inline command /play: Youtube, SoundCloud
+Command description:
+    /play [title] - add media to queue
+    /play [title] @video - add media as video
+    /play [title] @sc@ - search and add media from SoundCloud
+    /play [title] @yt@ - search and add media from YouTube
+    /play - start playing from media queue
+    inline /play [title] - search media via Ethernet
+    /skip - skip current playing media
+    /clear - full clear media queue
+    /clear [count] - clear count of media from queue
+    /clear [-count] - clear count of media from back of queue
+    /pause - pause/resume playing media
+    /now - info about current playing media
+    /queue - media queue
+    /queue [page] - page of media queue
+    /join - join groupcall
+    /leave - leave groupcall
+Code changes:
+    -GroupCall support: handlers, events
+    -TwitchAPI support: requests, handlers
+    -MongoDB support: connection, requests
+    -Aiogram support: bot, handlers, commands
+    -Pyrogram support: bot, userbot, handlers, commands, inline commands
+    -WebServer support: handlers, requests
+    -youtube_dl support: search
+Other changes:
+    -Show information when start playing media
+    -Show list of bot commands by using "/" in chat
+    -Properly output all info, errors, success, fails
+    -Saving queue of media to DataBase
+    -License changes
+    -Project structure changes
+------------------------------------------------------------------------------------------------------------------------
+v 1.01
+========================
+Minor improvements and bug fixes
+User changes:
+    -Added new commands: /speech_to_text, /lyrics, /stats
+    -Support for command /speech_to_text: GoogleRecognizer, /lyrics: Genius
+Command description:
+    /speech_to_text - reply to voice message with /speech_to_text command to recognize audio
+    /speech_to_text [language_code] (default: ru-RU, Russian language) - recognize another language audio
+    /lyrics - lyrics for current playing audio
+    /lyrics [title] - lyrics for title
+    /stats random - random message from chat
+    /stats [user] - stats from user in chat
+    /stats - top members of chat
+Code changes:
+    -Format media convertor (ffmpeg)
+Other changes:
+    -Google Custom Search support
+    -Google Search support
+    -Support for Pyrogram v.1.3.1: filter changes (group, private)
+    -Voice group need to be initialized for bot (end current voice group and create new one) if bot was offline when you
+    created new or ended previous voice group
+    -inline /play results count changed from 10 to 6
+------------------------------------------------------------------------------------------------------------------------
