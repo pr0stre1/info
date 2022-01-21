@@ -3,11 +3,12 @@ v 1.00
 User changes:
     -Added new commands: /play, /skip, /clear, /pause, /now, /queue, /join, /leave, inline /play
     -Support for command /play: YouTube, SoundCloud, Twitch, Streams, video, sync
-    -Support for inline command /play: Youtube, SoundCloud
-    
+    -Support for inline command /play: YouTube, SoundCloud
+
 Command description:
     /play [title] - add media to queue
-    /play [title] @video - add media as video
+    /play [title] @video@ - add media as video
+    /play [title] @video@ @sync@ - add media as video with sync to audio
     /play [title] @sc@ - search and add media from SoundCloud
     /play [title] @yt@ - search and add media from YouTube
     /play - start playing from media queue
@@ -22,7 +23,7 @@ Command description:
     /queue [page] - page of media queue
     /join - join groupcall
     /leave - leave groupcall
-    
+
 Code changes:
     -GroupCall support: handlers, events
     -TwitchAPI support: requests, handlers
@@ -31,7 +32,7 @@ Code changes:
     -Pyrogram support: bot, userbot, handlers, commands, inline commands
     -WebServer support: handlers, requests
     -youtube_dl support: search
-    
+
 Other changes:
     -Show information when start playing media
     -Show list of bot commands by using "/" in chat
@@ -47,7 +48,7 @@ Minor improvements and bug fixes
 User changes:
     -Added new commands: /speech_to_text, /lyrics, /stats
     -Support for command /speech_to_text: GoogleRecognizer, /lyrics: Genius
-    
+
 Command description:
     /speech_to_text - reply to voice message with /speech_to_text command to recognize audio
     /speech_to_text [language_code] (default: ru-RU, Russian language) - recognize another language audio
@@ -56,10 +57,10 @@ Command description:
     /stats random - random message from chat
     /stats [user] - stats from user in chat
     /stats - top members of chat
-    
+
 Code changes:
     -Format media convertor (ffmpeg)
-    
+
 Other changes:
     -Google Custom Search support
     -Google Search support
@@ -67,4 +68,18 @@ Other changes:
     -Voice group need to be initialized for bot (end current voice group and create new one) if bot was offline when you
     created new or ended previous voice group
     -inline /play results count changed from 10 to 6
+------------------------------------------------------------------------------------------------------------------------
+v.1.0.2
+
+User changes:
+    -Added new command: /language
+    -Added patch-notes for every version
+
+Command description:
+    /language [language_code] (default: ru, Russian language (another option: en, English language)) - change language
+    of bot
+
+Code changes:
+    -Internationalization (I18N) and localization (L10N) services support
+    -Added locale (en, ru) files
 ------------------------------------------------------------------------------------------------------------------------
